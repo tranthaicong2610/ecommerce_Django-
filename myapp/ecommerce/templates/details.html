@@ -1,10 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'layouts/site.html' %}
+{% block title%}Home{% endblock %}
+{% block content %}
 
-</body>
-</html>
+{% load static %}
+
+
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1>Online Store</h1>
+        <p>Thank you for visiting our website - We will make you satisfied </p>
+
+    </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+
+
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">Stores</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-4 sidenav">
+            <h4>{{product.name}}</h4>
+            <img src="{{product.image}}" alt="Lights" style="width:100%;height:400px;">
+            <div class="caption">
+                <p>{{product.description}}</p>
+            </div>
+            <input type="submit" class="btn btn-danger" value="Thêm vào rỏ hàng">
+            <input type="submit" class="btn btn-info" value="Mua ngay">
+
+            <div class="container">
+                <h2>Shipment</h2>
+
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        Shipment
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+                        <li><a href="#">HÀ NỘI</a></li>
+                        <li><a href="#">TP HCM</a></li>
+                        <li><a href="#">ĐÀ NĂNG</a></li>
+                        <li><a href="#">QUẢNG NINH</a></li>
+                        <li><a href="#">CẦN THƠ</a></li>
+                        <li><a href="#">CÀ MAU</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-8">
+            <h4><small>{{product.name}}</small></h4>
+            <hr>
+            <h2>{{product.name}}</h2>
+            <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
+            <p>{{product.description}}</p>
+            <br><br>
+
+            <h4><small>RECENT POSTS</small></h4>
+            <hr>
+            <h2>Shop Ptit</h2>
+            <h5><span class="label label-success">Lorem</span></h5><br>
+            <p>
+                mọi dịch vụ của chúng tôi sẽ cố gắng để dem lại cho bạn trải nghiệm tuyệt vời nhất .
+                <br>
+                Nếu sản phẩm được giao đến cho bạn có sự cố hay vấn đề về chất lượng thì hay liên hệ với chúng tôi trong
+                khoảng 5 ngày kể từ khi đặt hàng.
+                <br>
+                Giám Đốc : Trần Đình Quế
+                <br>
+                SĐT : 0123456789
+
+            </p>
+
+            <hr>
+
+            <h4>Leave a Comment:</h4>
+            <form role="form">
+                <div class="form-group">
+                    <textarea class="form-control" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+            <br><br>
+
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+//
+<div>
+
+</div>
+
+
+{% endblock %}
